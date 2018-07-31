@@ -23,5 +23,11 @@
   "bugs": {
     "url": "https://github.com/mnap00/00-webpage-boilerplate/issues"
   },
-  "homepage": "https://github.com/mnap00/00-webpage-boilerplate#readme"
+  "homepage": "https://github.com/mnap00/00-webpage-boilerplate#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "npm-run-all": "^4.1.3",
+    "onchange": "^4.1.0",
+    "shx": "^0.3.2"
+  }
 }
