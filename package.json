@@ -1,0 +1,27 @@
+{
+  "name": "00-webpage-boilerplate",
+  "version": "0.1.0",
+  "description": "Boilerplate for simple webpage",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mnap00/00-webpage-boilerplate.git"
+  },
+  "keywords": [
+    "webpage",
+    "html5",
+    "sass",
+    "es6",
+    "babel",
+    "eslint"
+  ],
+  "author": "mnap00",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnap00/00-webpage-boilerplate/issues"
+  },
+  "homepage": "https://github.com/mnap00/00-webpage-boilerplate#readme"
+}
