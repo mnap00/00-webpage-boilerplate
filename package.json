@@ -8,10 +8,11 @@
     "npm": ">=4"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "run-s lint:*",
+    "lint:css": "stylelint \"src/css/**/*.css\"",
+    "lint:html": "html5v \"src/*.html\"",
     "lint:scss": "stylelint \"src/sass/**/*.scss\" --syntax scss",
-    "lint:css": "stylelint \"src/css/**/*.css\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
