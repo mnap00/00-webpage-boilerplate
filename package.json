@@ -1,14 +1,18 @@
 {
-  "name": "00-webpage-boilerplate",
+  "name": "00-starter-website",
   "version": "0.1.0",
-  "description": "Boilerplate for simple webpage",
+  "description": "Starter for simple website",
   "private": true,
+  "engines": {
+      "node": ">=8",
+      "npm": ">=4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/mnap00/00-webpage-boilerplate.git"
+    "url": "git+ssh://git@github.com/mnap00/00-starter-website.git"
   },
   "keywords": [
     "webpage",
@@ -21,9 +25,9 @@
   "author": "mnap00",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mnap00/00-webpage-boilerplate/issues"
+    "url": "https://github.com/mnap00/00-starter-website/issues"
   },
-  "homepage": "https://github.com/mnap00/00-webpage-boilerplate#readme",
+  "homepage": "https://github.com/mnap00/00-starter-website#readme",
   "devDependencies": {
     "autoprefixer": "^9.0.2",
     "babel-cli": "^6.26.0",
