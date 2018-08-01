@@ -4,8 +4,8 @@
   "description": "Starter for simple website",
   "private": true,
   "engines": {
-      "node": ">=8",
-      "npm": ">=4"
+    "node": ">=8",
+    "npm": ">=4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
