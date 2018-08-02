@@ -8,11 +8,15 @@
     "npm": ">=4"
   },
   "scripts": {
+    "dev": "run-p dev:*",
+    "dev:html": "shx cp src/*.html dist/",
+    "build": "run-p build:*",
+    "build:html": "html-minifier -c .htmlminifierrc.json -o dist/index.html src/*.html",
     "lint": "run-s lint:*",
     "lint:html": "html5v \"src/*.html\"",
-    "lint:css": "stylelint \"src/css/**/*.css\"",
     "lint:scss": "stylelint \"src/sass/**/*.scss\" --syntax scss",
     "lint:js": "eslint \"src/js/**\"",
+    "pretest": "npm run lint",
     "test": "npm run lint"
   },
   "repository": {
