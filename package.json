@@ -9,10 +9,11 @@
   },
   "scripts": {
     "lint": "run-s lint:*",
-    "lint:css": "stylelint \"src/css/**/*.css\"",
     "lint:html": "html5v \"src/*.html\"",
+    "lint:css": "stylelint \"src/css/**/*.css\"",
     "lint:scss": "stylelint \"src/sass/**/*.scss\" --syntax scss",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:js": "eslint \"src/js/**\"",
+    "test": "npm run lint"
   },
   "repository": {
     "type": "git",
