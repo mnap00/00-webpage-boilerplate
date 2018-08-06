@@ -22,7 +22,7 @@
     "build:scss": "node-sass --output-style compressed src/scss/style.scss dist/css/style.min.css",
     "build:prefix": "postcss dist/css/style.min.css --use autoprefixer --no-map --replace",
     "build:js": "babel src/js --out-file dist/js/script.js",
-    "vendor": "shx cp vendor/**/* dist/vendor/",
+    "vendor": "shx cp -r vendor/**/* dist/vendor/ || true",
     "build:uglify": "uglifyjs dist/js/script.js --output dist/js/script.min.js --compress --mangle",
     "watch": "run-p watch:*",
     "watch:vendor": "onchange \"vendor/**/*\" -- run-s vendor",
