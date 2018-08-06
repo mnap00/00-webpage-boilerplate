@@ -14,6 +14,7 @@
   ],
   "scripts": {
     "clean": "shx rm -rf dist",
+    "dirs": "shx mkdir -p dist/css dist/js dist/vendor",
     "dev": "run-p dev:*",
     "dev:html": "shx cp src/*.html dist/",
     "dev:scss": "node-sass --output-style expanded --source-map true src/scss/style.scss dist/css/style.css",
@@ -25,7 +26,7 @@
     "build:js": "babel src/js --out-file dist/js/script.js",
     "vendor": "shx cp -r vendor/**/* dist/vendor/ || true",
     "build:uglify": "uglifyjs dist/js/script.js --output dist/js/script.min.js --compress --mangle",
-    "watch": "run-p watch:*",
+    "watch": "run-p watch:* serve",
     "watch:vendor": "onchange \"vendor/**/*\" -- run-s vendor",
     "watch:html": "onchange \"src/**/*.html\" -- run-s dev:html",
     "watch:scss": "onchange \"src/**/*.scss\" -- run-s dev:scss",
@@ -35,7 +36,7 @@
     "lint:html": "html5v \"src/*.html\"",
     "lint:scss": "stylelint \"src/scss/**/*.scss\" --syntax scss",
     "lint:js": "eslint \"src/js/**\"",
-    "start": "run-s clean dev watch serve",
+    "start": "run-s clean dirs dev watch",
     "pretest": "npm run lint",
     "test": "shx echo \"Tests passed\""
   },
