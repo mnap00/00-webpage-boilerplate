@@ -13,11 +13,12 @@
     "not dead"
   ],
   "scripts": {
+    "clean": "shx rm -rf dist",
     "dev": "run-p dev:*",
     "dev:html": "shx cp src/*.html dist/",
     "dev:scss": "node-sass --output-style expanded --source-map true src/scss/style.scss dist/css/style.css",
     "dev:js": "babel src/js --source-maps inline --out-file dist/js/script.js",
-    "build": "run-s build:*",
+    "build": "run-s test build:*",
     "build:html": "html-minifier --config-file .htmlminifierrc.json --output dist/index.html src/*.html",
     "build:scss": "node-sass --output-style compressed src/scss/style.scss dist/css/style.min.css",
     "build:prefix": "postcss dist/css/style.min.css --use autoprefixer --no-map --replace",
@@ -29,10 +30,12 @@
     "watch:html": "onchange \"src/**/*.html\" -- run-s dev:html",
     "watch:scss": "onchange \"src/**/*.scss\" -- run-s dev:scss",
     "watch:js": "onchange \"src/**/*.js\" -- run-s dev:js",
+    "serve": "browser-sync start --server \"dist\" --files \"dist\"",
     "lint": "run-s lint:*",
     "lint:html": "html5v \"src/*.html\"",
     "lint:scss": "stylelint \"src/scss/**/*.scss\" --syntax scss",
     "lint:js": "eslint \"src/js/**\"",
+    "start": "run-s clean dev watch serve",
     "pretest": "npm run lint",
     "test": "shx echo \"Tests passed\""
   },
